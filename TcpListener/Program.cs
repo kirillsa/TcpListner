@@ -11,7 +11,7 @@ class TelnetServer
 
     static async Task Main(string[] args)
     {
-        if (args.Length == 0 || !int.TryParse(args[0], out int port))
+        if (args.Length == 0 || !int.TryParse(args[0], out var port))
         {
             Console.WriteLine("Usage: dotnet run <port>");
             return;
@@ -30,7 +30,7 @@ class TelnetServer
 
     static async Task HandleClientAsync(TcpClient client)
     {
-        if (client is null || client.Client is null || client.Client.RemoteEndPoint is null)
+        if (client?.Client?.RemoteEndPoint is null)
         {
             return;
         }
