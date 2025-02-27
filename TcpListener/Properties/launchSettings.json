@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TcpListener": {
+      "commandName": "Project",
+      "commandLineArgs": "5000"
+    }
+  }
+}
